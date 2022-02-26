@@ -1,0 +1,129 @@
+:root {
+    --main-color: rgb(30, 47, 90);
+    --other-color: rgb(0, 45, 160);
+    --alt-color: rgb(118, 108, 241);
+    --p-alt-color: rgb(146 147 163);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-color: rgb(224, 232, 255);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+    .summary {
+        background: url(../images/pattern-background-mobile.svg);
+        background-color: rgb(224, 232, 255);
+        background-size: contain;
+        background-repeat: no-repeat;
+        }
+}
+.container {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container #main-pic {
+    max-width: 100%;
+    width: 100%;
+}
+.container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+.container .main-text{
+    text-align: center;
+}
+.container .main-text h2 {
+    color: var(--main-color);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+.container .main-text p {
+    color: var(--p-alt-color);
+    font-size: 13px;
+}
+.container .plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    width: 100%;
+}
+.container .plan img {
+    max-width: 35px;
+}
+.container .plan .plan-text {
+    color: var(--p-color);
+    text-transform: capitalize;
+    margin-left: -20px;
+}
+.container .plan .plan-text h4 {
+    margin-bottom: 2px;
+    color: var(--main-color);
+    font-size: 13px;
+}
+.container .plan .plan-text span {
+    color: var(--p-alt-color);
+    text-transform: none;
+    font-size: 12px;
+}
+.container .plan a {
+    color: var(--other-color);
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.container .plan a:hover {
+    color: var(--alt-color);
+    text-decoration: none;
+}
+.container a#payment {
+    padding: 10px;
+    background: var(--other-color);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 6px 14px 5px #00000024;
+}
+.container a#payment:hover {
+    background: var(--alt-color);
+}
+.container a#cancel {
+    color: var(--alt-color);
+    font-weight: bold;
+    font-size: 15px;
+}
+.container a#cancel:hover {
+    color: var(--main-color);
+}
